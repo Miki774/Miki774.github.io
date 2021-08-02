@@ -1,0 +1,60 @@
+body{
+    background-image: url(https://wallpapercave.com/wp/wp4946714.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    text-align: center;
+    margin-top: 120px;
+    color: #4abd55;
+    font-weight: bold;
+}
+
+.rock{
+    width: 250px;
+    height: 225px;
+    background-image: url(rock.png);
+    
+}
+
+.paper{
+    width: 250px;
+    height: 225px;
+    background-image: url(paper.png);
+}
+
+.scissors{
+    width: 250px;
+    height: 225px;
+    background-image: url(scissors.png);
+}
+
+input{
+    border: 3px solid #e39f3a;
+    font-size: 0;
+}
+
+input:active{
+    transform: scale(1.125);
+}
+
+h1{
+    font-size: 50px;
+}
+
+.para{
+    font-size: 26px;
+}
+
+.playAgain{
+    width: 250px;
+    height: 225px;
+    background-image: url(playagain.jpg);
+    border: 3px solid #e39f3a;
+    font-size: 0;
+}
+
+.playAgain:active{
+    transform: scale(1.125);
+}
