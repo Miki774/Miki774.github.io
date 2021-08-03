@@ -52,11 +52,20 @@ const container = document.querySelector('.container');
 const h1 = document.querySelector('h1');
 const h2 = document.querySelector('h2');
 const playAgainp = document.createElement('p');
+const audio = document.querySelector('.stefan');
+const igzo = document.querySelector('.igzo')
+const miki = document.querySelector('.miki');
+const bgmusic = document.querySelector('.bgmusic');
+igzo.volume = 0.5;
+bgmusic.volume = 0.3;
+miki.volume = 0.2;
 playAgain.classList.add('playAgain');
 playAgainp.classList.add('playAgainp')
 playAgainp.textContent = 'Play Again?';
 buttons.forEach(button =>{
     button.addEventListener('click', function(){
+        bgmusic.play();
+        bgmusic.loop == true;
         h2.remove();
         h1.remove();
         p1.textContent = playRound(button.value, computerPlay());
@@ -81,8 +90,10 @@ buttons.forEach(button =>{
                     p3.textContent = "";
                     playAgain.style.display = "none";
                     playAgainp.style.display = "none";
+                    igzo.play();
                 })
             })
+            miki.play();
         }
         else if(l==5){
             p3.textContent = "Unlucky, you are the LOSER!\n\nYour score is:\n" + w + " wins\n" + l + " loses\n" + t + " tied";
@@ -104,8 +115,10 @@ buttons.forEach(button =>{
                     p3.textContent = "";
                     playAgain.style.display = "none";
                     playAgainp.style.display = "none";
+                    igzo.play();
                 })
             })
+            audio.play();
         }
     })
 })

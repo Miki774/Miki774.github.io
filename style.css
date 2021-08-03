@@ -24,20 +24,20 @@ body{
 .rock{
     width: 250px;
     height: 225px;
-    background-image: url(rock.png);
+    background-image: url(Images/rock.png);
     
 }
 
 .paper{
     width: 250px;
     height: 225px;
-    background-image: url(paper.png);
+    background-image: url(Images/paper.png);
 }
 
 .scissors{
     width: 250px;
     height: 225px;
-    background-image: url(scissors.png);
+    background-image: url(Images/scissors.png);
 }
 
 input{
@@ -66,7 +66,7 @@ h1{
 .playAgain{
     width: 250px;
     height: 225px;
-    background-image: url(playagain.jpg);
+    background-image: url(Images/playagain.jpg);
     border: 3px solid #e39f3a;
     font-size: 0;
 }
