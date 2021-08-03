@@ -2,13 +2,23 @@ body{
     background-image: url(https://wallpapercave.com/wp/wp4946714.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
 }
 
 .container{
-    text-align: center;
-    margin-top: 120px;
-    color: #4abd55;
+    margin-top: 80px;
+    color: #e3bf3b;
     font-weight: bold;
+    background-color: rgba(45, 89, 57,0.5);
+    border: 5px solid orange;
+    width: 900px;
+    height: 860px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .rock{
@@ -33,14 +43,20 @@ body{
 input{
     border: 3px solid #e39f3a;
     font-size: 0;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 input:active{
     transform: scale(1.125);
+    border-color:  green;
 }
 
 h1{
-    font-size: 50px;
+    font-size: 80px;
+    position: absolute;
+    top: 120px;
+    left: 620px;
 }
 
 .para{
@@ -57,4 +73,41 @@ h1{
 
 .playAgain:active{
     transform: scale(1.125);
+    border-color:  green;
+}
+
+h2{
+    font-size: 43px;
+    position: absolute;
+    top: 250px;
+}
+
+.buttontxt{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    width: 850px;;
+    justify-content: space-around;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.buttontxt p{
+    font-size: 35px;
+    position: absolute;
+}
+
+.r{
+    margin-top: 20px;
+    left: 110px;
+}
+
+.p{
+    margin-top: 20px;
+    left: 379px;
+}
+
+.s{
+    margin-top: 20px;
+    right: 95px;
 }

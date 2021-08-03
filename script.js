@@ -69,10 +69,14 @@ let p2 = document.querySelector('.para2');
 let p3 = document.querySelector('.para3');
 const playAgain = document.createElement('button');
 const container = document.querySelector('.container');
+const h1 = document.querySelector('h1');
+const h2 = document.querySelector('h2');
 playAgain.textContent = 'Play Again'
 playAgain.classList.add('playAgain')
 buttons.forEach(button =>{
     button.addEventListener('click', function(){
+        h2.remove();
+        h1.remove();
         p1.textContent = playRound(button.value, computerPlay());
         p2.textContent = "You: " + w + " Computer: " + l;
         if(w==5){
