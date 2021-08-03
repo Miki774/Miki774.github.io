@@ -42,26 +42,6 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-function game(){
-    let computerPlay1, again="Yes";
-        for(let i=0;i<5;i++){
-            computerPlay1 = computerPlay();
-            console.log(playRound(playerSelection, computerPlay1) + "\nYou: " + w + "\nComputer: " + l);
-        }
-        if(w>l){
-            console.log("Congrats, you are the WINNER!\n\nYour score is:\n" + w + " wins\n" + l + " loses\n" + t + " tied");
-        }
-        else if(w==l){
-            console.log("It is tied!\n\nYour score is:\n" + w + " wins\n" + l + " loses\n" + t + " tied");
-        }
-        else{
-            console.log("Unlucky, you are the LOSER!\n\nYour score is:\n" + w + " wins\n" + l + " loses\n" + t + " tied");
-        }
-        w=0;
-        l=0;
-        t=0;
-    }
-
 let w=0, l=0, t=0;
 const buttons = document.querySelectorAll('input');
 let p1 = document.querySelector('.para1');
@@ -71,8 +51,10 @@ const playAgain = document.createElement('button');
 const container = document.querySelector('.container');
 const h1 = document.querySelector('h1');
 const h2 = document.querySelector('h2');
-playAgain.textContent = 'Play Again'
-playAgain.classList.add('playAgain')
+const playAgainp = document.createElement('p');
+playAgain.classList.add('playAgain');
+playAgainp.classList.add('playAgainp')
+playAgainp.textContent = 'Play Again?';
 buttons.forEach(button =>{
     button.addEventListener('click', function(){
         h2.remove();
@@ -82,6 +64,7 @@ buttons.forEach(button =>{
         if(w==5){
             p3.textContent = "Congrats, you are the WINNER!\n\nYour score is:\n" + w + " wins\n" + l + " loses\n" + t + " tied";
             playAgain.style.display = "";
+            playAgainp.style.display = "";
             w=0;
             l=0;
             t=0;
@@ -89,6 +72,7 @@ buttons.forEach(button =>{
                 button.disabled = true;
             })
             container.appendChild(playAgain);
+            container.appendChild(playAgainp);
             playAgain.addEventListener('click', function(){
                 buttons.forEach(button =>{
                     button.disabled = false;
@@ -96,12 +80,14 @@ buttons.forEach(button =>{
                     p2.textContent = "";
                     p3.textContent = "";
                     playAgain.style.display = "none";
+                    playAgainp.style.display = "none";
                 })
             })
         }
         else if(l==5){
             p3.textContent = "Unlucky, you are the LOSER!\n\nYour score is:\n" + w + " wins\n" + l + " loses\n" + t + " tied";
             playAgain.style.display = "";
+            playAgainp.style.display = "";
             w=0;
             l=0;
             t=0;
@@ -109,6 +95,7 @@ buttons.forEach(button =>{
                 button.disabled = true;
             })
             container.appendChild(playAgain);
+            container.appendChild(playAgainp);
             playAgain.addEventListener('click', function(){
                 buttons.forEach(button =>{
                     button.disabled = false;
@@ -116,6 +103,7 @@ buttons.forEach(button =>{
                     p2.textContent = "";
                     p3.textContent = "";
                     playAgain.style.display = "none";
+                    playAgainp.style.display = "none";
                 })
             })
         }

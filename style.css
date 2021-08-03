@@ -19,6 +19,8 @@ body{
     text-align: center;
     justify-content: center;
     align-items: center;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.2px;
 }
 
 .rock{
@@ -110,4 +112,8 @@ h2{
 .s{
     margin-top: 20px;
     right: 95px;
+}
+
+.playAgainp{
+    font-size: 30px;
 }
